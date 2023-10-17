@@ -1,10 +1,21 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Validation from "./components/Validation";
+import { generateValidationOptions } from "./utils/generateValidations";
 
 const App: React.FC = () => {
+  const selectedValidations = [
+    "hasNumbers",
+    "hasSpecialCharacters",
+    "hasUppercaseLetter",
+    "hasNoConsecutiveCharacters",
+  ];
+  const validations = generateValidationOptions(selectedValidations);
+
   return (
     <div className="App">
-      <h1>Hello, TypeScript!</h1>
+      <h1>Password Component</h1>
+      <Validation options={validations} />
     </div>
   );
 };
