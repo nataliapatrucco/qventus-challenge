@@ -27,17 +27,10 @@ const Validation = ({ options }: Props) => {
         alignItems: "center",
       }}
     >
-      <input
-        onChange={handleChange}
-        type="password"
-      />
+      <input aria-label="Password" onChange={handleChange} type="password" />
       <ul style={{ listStyle: "none", padding: "0px" }}>
-        {validationItems.map(({key, success, message}) => (
-          <Item
-            key={key}
-            success={success}
-            message={message}
-          />
+        {validationItems.map(({ key, success, message }) => (
+          <Item key={key} success={success} message={message} />
         ))}
       </ul>
     </div>

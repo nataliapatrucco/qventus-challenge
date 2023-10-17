@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import Validation from "./components/Validation";
 import { generateValidationOptions } from "./utils/generateValidations";
+import { Validation } from "./components/Validation";
 
 const App: React.FC = () => {
   const selectedValidations = [
